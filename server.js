@@ -16,4 +16,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(adminRoutes);
 app.use(homeRoutes);
 
+// Not found page
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, 'views', '404.html'));
+});
+
 app.listen(3000);
