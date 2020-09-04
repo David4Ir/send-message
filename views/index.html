@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <title>اپلیکیشن ارسال پیام</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container mx-auto mt-5 w-full max-w-xs">
+      <form
+        action="/admin/message"
+        method="POST"
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      >
+        <div class="mb-4">
+          <label
+            for="message"
+            class="block text-gray-700 text-sm font-bold mb-2"
+          >
+            پیام
+          </label>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            placeholder="پیامت رو اینجا بنویس..."
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+            type="submit"
+          >
+            ارسال
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
